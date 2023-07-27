@@ -14,7 +14,7 @@
     android:theme="@style/Theme.Default.SplashScreen"
     tools:targetApi="33">
     <activity
-      android:name=".AuthActivity"
+      android:name=".LoginActivity"
       android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

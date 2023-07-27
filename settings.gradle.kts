@@ -1,4 +1,4 @@
-rootProject.name = "auth"
+rootProject.name = "login"
 
 pluginManagement {
     includeBuild("conventions")
