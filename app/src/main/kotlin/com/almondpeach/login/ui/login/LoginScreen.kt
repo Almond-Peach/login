@@ -30,28 +30,28 @@ fun LoginScreen(
 ) {
     LaunchedEffect(Unit) { onLaunch() }
 
-    val columnModifier = when (LocalConfiguration.current.orientation) {
-        Configuration.ORIENTATION_PORTRAIT ->
-            modifier
-                .fillMaxSize()
-                .paint(
-                    painter = painterResource(id = R.drawable.bg),
-                    contentScale = ContentScale.FillBounds,
-                )
-
-        else -> modifier.fillMaxSize()
-    }
+    val orientation = LocalConfiguration.current.orientation
 
     Column(
-        modifier = columnModifier.verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterVertically),
+        modifier = modifier
+            .fillMaxSize()
+            .run {
+                if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+                    this.paint(
+                        painter = painterResource(id = R.drawable.bg),
+                        contentScale = ContentScale.FillBounds,
+                    )
+                } else {
+                    this
+                }
+            }
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(25.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(modifier = Modifier.height(20.dp))
         LoginHeader()
-        Spacer(modifier = Modifier.height(15.dp))
         LoginBody()
-        Spacer(modifier = Modifier.height(15.dp))
         LoginFooter()
         Spacer(modifier = Modifier.height(20.dp))
     }

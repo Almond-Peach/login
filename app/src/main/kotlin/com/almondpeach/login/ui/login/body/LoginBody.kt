@@ -30,17 +30,8 @@ fun LoginBody(
     var passwordVisible by rememberSaveable { mutableStateOf(false) }
 
     val orientation = LocalConfiguration.current.orientation
-    val fieldHorizontalPadding = when (orientation) {
-        Configuration.ORIENTATION_PORTRAIT -> 24.dp
-        else -> 48.dp
-    }
-
     val context = LocalContext.current
-    val successfulLoginText = stringResource(R.string.successful_login)
-    val buttonHorizontalPadding = when (orientation) {
-        Configuration.ORIENTATION_PORTRAIT -> 48.dp
-        else -> 72.dp
-    }
+    val onSuccessfulLoginText = stringResource(R.string.successful_login)
 
     Column(
         modifier = modifier.fillMaxSize(),
@@ -50,14 +41,14 @@ fun LoginBody(
         EmailField(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(horizontal = fieldHorizontalPadding),
+                .padding(horizontal = if (orientation == Configuration.ORIENTATION_PORTRAIT) 24.dp else 48.dp),
             email = email,
             onEmailChange = { email = it },
         )
         PasswordField(
             modifier = modifier
                 .fillMaxWidth()
-                .padding(horizontal = fieldHorizontalPadding),
+                .padding(horizontal = if (orientation == Configuration.ORIENTATION_PORTRAIT) 24.dp else 48.dp),
             password = password,
             onPasswordChange = { password = it },
             passwordVisible = passwordVisible,
@@ -66,9 +57,9 @@ fun LoginBody(
         LoginButton(
             Modifier
                 .fillMaxWidth()
-                .padding(horizontal = buttonHorizontalPadding)
-                .padding(top = 10.dp),
-            onClick = { Toast.makeText(context, successfulLoginText, Toast.LENGTH_SHORT).show() },
+                .padding(horizontal = if (orientation == Configuration.ORIENTATION_PORTRAIT) 48.dp else 72.dp)
+                .padding(top = 20.dp),
+            onClick = { Toast.makeText(context, onSuccessfulLoginText, Toast.LENGTH_SHORT).show() },
         )
     }
 }
