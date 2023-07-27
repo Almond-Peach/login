@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui.login.options
+package com.almondpeach.login.ui.login.footer.options
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size

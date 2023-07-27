@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui.login
+package com.almondpeach.login.ui.login.header
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

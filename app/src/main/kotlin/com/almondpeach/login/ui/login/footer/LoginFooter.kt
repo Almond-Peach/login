@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui.login
+package com.almondpeach.login.ui.login.footer
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -8,9 +8,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.almondpeach.login.ui.common.DevicePreviews
-import com.almondpeach.login.ui.login.options.FacebookLoginOption
-import com.almondpeach.login.ui.login.options.GoogleLoginOption
-import com.almondpeach.login.ui.login.options.InstagramLoginOption
+import com.almondpeach.login.ui.login.footer.options.FacebookLoginOption
+import com.almondpeach.login.ui.login.footer.options.GoogleLoginOption
+import com.almondpeach.login.ui.login.footer.options.InstagramLoginOption
 
 @Composable
 fun LoginFooter(

@@ -20,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import com.almondpeach.login.R
 import com.almondpeach.login.ui.common.DevicePreviews
 import com.almondpeach.login.ui.login.body.LoginBody
+import com.almondpeach.login.ui.login.footer.LoginFooter
+import com.almondpeach.login.ui.login.header.LoginHeader
 
 @Composable
 fun LoginScreen(

@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui.login.options
+package com.almondpeach.login.ui.login.footer.options
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -9,14 +9,14 @@ import androidx.compose.ui.unit.dp
 import com.almondpeach.login.R
 
 @Composable
-fun FacebookLoginOption(
+fun InstagramLoginOption(
     modifier: Modifier = Modifier,
     size: Dp = 48.dp,
 ) {
     LoginOption(
         modifier = modifier,
-        painter = painterResource(R.drawable.ic_login_fb),
-        contentDescription = stringResource(id = R.string.login_fb),
+        painter = painterResource(R.drawable.ic_login_ig),
+        contentDescription = stringResource(id = R.string.login_ig),
         size = size,
     )
 }
