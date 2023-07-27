@@ -34,4 +34,5 @@ style:
   UnusedPrivateMember:
     ignoreAnnotated: [
       'androidx.compose.ui.tooling.preview.Preview',
+      'DevicePreviews',
     ]

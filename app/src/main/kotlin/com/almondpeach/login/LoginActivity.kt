@@ -11,7 +11,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.almondpeach.login.ui.LoginScreen
+import com.almondpeach.login.ui.login.LoginScreen
 
 class LoginActivity : ComponentActivity() {
     private var keepSplashScreenOn: Boolean = true

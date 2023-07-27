@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui
+package com.almondpeach.login.ui.login
 
 import android.content.res.Configuration
 import android.widget.Toast
@@ -27,10 +27,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.tooling.preview.Devices
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.almondpeach.login.R
+import com.almondpeach.login.ui.common.DevicePreviews
 
 @Composable
 fun LoginBody(
@@ -133,18 +132,7 @@ fun LoginButton(
     }
 }
 
-@Preview(
-    name = "portrait",
-    showBackground = true,
-    device = Devices.PHONE,
-)
-@Preview(
-    name = "landscape",
-    widthDp = 1024,
-    heightDp = 720,
-    showBackground = true,
-    device = Devices.AUTOMOTIVE_1024p,
-)
+@DevicePreviews
 @Composable
 private fun LoginBodyPreview() {
     LoginBody()

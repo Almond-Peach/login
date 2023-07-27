@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui
+package com.almondpeach.login.ui.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -12,11 +12,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Devices
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.almondpeach.login.R
+import com.almondpeach.login.ui.common.DevicePreviews
 
 @Composable
 fun LoginHeader(
@@ -41,18 +40,7 @@ fun LoginHeader(
     }
 }
 
-@Preview(
-    name = "portrait",
-    showBackground = true,
-    device = Devices.PHONE,
-)
-@Preview(
-    name = "landscape",
-    widthDp = 1024,
-    heightDp = 720,
-    showBackground = true,
-    device = Devices.AUTOMOTIVE_1024p,
-)
+@DevicePreviews
 @Composable
 private fun LoginHeaderPreview() {
     LoginHeader()

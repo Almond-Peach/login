@@ -1,4 +1,4 @@
-package com.almondpeach.login.ui
+package com.almondpeach.login.ui.login
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
@@ -16,10 +16,9 @@ import androidx.compose.ui.draw.paint
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Devices
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.almondpeach.login.R
+import com.almondpeach.login.ui.common.DevicePreviews
 
 @Composable
 fun LoginScreen(
@@ -55,18 +54,7 @@ fun LoginScreen(
     }
 }
 
-@Preview(
-    name = "portrait",
-    showBackground = true,
-    device = Devices.PHONE,
-)
-@Preview(
-    name = "landscape",
-    widthDp = 1024,
-    heightDp = 720,
-    showBackground = true,
-    device = Devices.AUTOMOTIVE_1024p,
-)
+@DevicePreviews
 @Composable
 private fun LoginScreenPreview() {
     LoginScreen()
