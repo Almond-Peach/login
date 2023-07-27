@@ -19,6 +19,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.almondpeach.login.R
 import com.almondpeach.login.ui.common.DevicePreviews
+import com.almondpeach.login.ui.login.body.LoginBody
 
 @Composable
 fun LoginScreen(
