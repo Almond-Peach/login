@@ -1,11 +1,11 @@
 # Jetpack Compose Homework
 
-Create a login screen that has email and password fields, a button for login, and other login options.
-The user should be able to fill the email and password, toggle password visibility with the eye toggle icon. On clicking
-the login button we should show a toast with some message (which you like).
-All the icons and resources will be provided in the zip folder.
+- Create a login screen that has email and password fields, a button for login, and other login options.
+- The user should be able to fill the email and password, toggle password visibility with the eye toggle icon.
+- On clicking the login button we should show a toast with some message (which you like).
+- All the icons and resources will be provided in the zip folder.
 
-Requirements:
+#### Requirements:
 
 - Min SDK version - 24
 - Landscape mode should be supported
