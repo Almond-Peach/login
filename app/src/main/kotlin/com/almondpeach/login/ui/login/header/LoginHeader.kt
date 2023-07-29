@@ -3,6 +3,7 @@ package com.almondpeach.login.ui.login.header
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,21 +19,21 @@ import com.almondpeach.login.R
 import com.almondpeach.login.ui.common.DevicePreviews
 
 @Composable
-fun LoginHeader(
-    modifier: Modifier = Modifier,
-) {
+fun LoginHeader() {
     Column(
-        modifier = modifier.fillMaxSize(),
+        modifier = Modifier
+            .padding(top = 20.dp)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_login_header),
             contentDescription = stringResource(R.string.login_header),
-            modifier = modifier.size(200.dp),
+            modifier = Modifier.size(200.dp),
         )
         Text(
             text = stringResource(id = R.string.login),
-            modifier = modifier,
+            modifier = Modifier,
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif,
